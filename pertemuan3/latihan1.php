@@ -1,25 +1,24 @@
 <?php
 
-////// Pengulangan //////
+// Pengulangan
 // for
 // while
 // do... while
 // foreach : pengulangan khusus array
 
 // for ($i = 0; $i < 5; $i++) {
-//     echo "Hello World! <br>";
+//     echo "Hello World \n";
 // }
 
-// $i = 0;
+// $i = 10;
 // while ($i < 5) {
-//     echo "<br> Hello World";
+//     echo "Hello World \n";
 //     $i++;
 // }
 
-// kalau do...while dia menjalankan perintah nya 1 kali walaupun false
-// $i = 0;
+// $i = 10;
 // do {
-//     echo "<br> Hello World";
+//     echo "Hello World \n";
 //     $i++;
 // } while ($i < 5);
 
@@ -31,8 +30,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Latihan 1</title>
+
     <style>
         .warna-baris {
             background-color: silver;
@@ -52,16 +51,7 @@
                 }
                 ?> -->
 
-        <!-- templating -->
-        <!-- <?php for ($i = 1; $i <= 3; $i++) : ?>
-            <tr>
-                <?php for ($j = 1; $j <= 5; $j++) : ?>
-                    <td><?= "$i, $j"; ?></td>
-                <?php endfor; ?>
-            </tr>
-        <?php endfor; ?> -->
-
-        <!-- <?php for ($i = 1; $i <= 5; $i++) : ?>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
             <?php if ($i % 2 == 1) : ?>
                 <tr class="warna-baris">
                 <?php else : ?>
@@ -71,7 +61,7 @@
                     <td><?= "$i, $j"; ?></td>
                 <?php endfor; ?>
                 </tr>
-            <?php endfor; ?> -->
+            <?php endfor; ?>
     </table>
 </body>
 

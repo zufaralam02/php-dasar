@@ -1,6 +1,6 @@
 <?php
 
-////// Pengkondisian / Percabangan //////
+// Pengkondisian / Percabangan
 // if else
 // if else if else
 // ternary
@@ -10,23 +10,40 @@
 // if ($x < 20) {
 //     echo "benar";
 // } else if ($x == 20) {
-//     echo "pas";
+//     echo "bingo";
 // } else {
 //     echo "salah";
 // }
 
-$warna = "hijau";
+// $x = 20;
+// echo ($x >= 20) ? "true" : "false";
 
-switch ($warna) {
-    case "merah":
-        echo "warna nya merah";
+// $x = 20;
+// echo $x ?? 100;
+
+// ternary
+// $nama = isset($_POST['nama']) ? $_POST['nama'] : "default";
+// null coalescing
+// $nama = $_POST['nama'] ?? "default";
+
+$color = "red";
+
+switch ($color) {
+    case "red":
+        echo "Your favorite color is red";
         break;
-    case "kuning":
-        echo "warna nya kuning";
+    case "yellow":
+        echo "Your favorite color is yellow";
         break;
-    case "hijau":
-        echo "warna nya hijau";
+    case "green":
+        echo "Your favorite color is green";
+        break;
+    case "blue":
+        echo "Your favorite color is blue";
+        break;
+    case "purple":
+        echo "Your favorite color is purple";
         break;
     default:
-        echo "kaga berwarna";
+        echo "None of your favorite colors";
 }
