@@ -3,7 +3,7 @@
 // Pengulangan pada array
 // for / foreach
 
-$angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+$angka = [3, 2, 15, 20, 11];
 
 ?>
 
@@ -13,9 +13,7 @@ $angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
+    <title>Latihan 2</title>
     <style>
         .kotak {
             width: 50px;
@@ -31,21 +29,24 @@ $angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             clear: both;
         }
     </style>
-
 </head>
 
 <body>
+    <?php for ($i = 0; $i < count($angka); $i++) { ?>
+        <div class="kotak"><?php echo $angka[$i] ?></div>
+    <?php } ?>
 
-    <?php for ($i = 0; $i < count($angka); $i++) : ?>
-        <div class="kotak"><?php echo $angka[$i]; ?></div>
-    <?php endfor; ?>
+    <div class="clear"></div>
+
+    <?php foreach ($angka as $a) { ?>
+        <div class="kotak"><?php echo $a ?></div>
+    <?php } ?>
 
     <div class="clear"></div>
 
     <?php foreach ($angka as $a) : ?>
-        <div class="kotak"><?= $a; ?></div>
+        <div class="kotak"><?= $a ?></div>
     <?php endforeach; ?>
-
 </body>
 
 </html>
