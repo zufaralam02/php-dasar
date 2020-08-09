@@ -4,14 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Post</title>
+    <title>POST</title>
 </head>
 
 <body>
-    <?php if (isset($_POST["nama"])) : ?>
-        <h1>Welcome <?= $_POST["nama"]; ?></h1>
-    <?php endif; ?>
+    <h1>Selamat Datang <?php echo $_POST["nama"]; ?></h1>
 </body>
 
 </html>

@@ -1,10 +1,18 @@
 <?php
-// cek apakah tidak ada data di $_GET
-if (!isset($_GET["nama"]) || !isset($_GET["nim"]) || !isset($_GET["email"]) || !isset($_GET["jurusan"]) || !isset($_GET["gambar"])) {
+
+// Cek apakah tidak ada data di $_GET
+if (
+    !isset($_GET["nama"]) ||
+    !isset($_GET["nrp"]) ||
+    !isset($_GET["email"]) ||
+    !isset($_GET["jurusan"]) ||
+    !isset($_GET["gambar"])
+) {
     // redirect
     header("Location: latihan1.php");
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +27,14 @@ if (!isset($_GET["nama"]) || !isset($_GET["nim"]) || !isset($_GET["email"]) || !
 
 <body>
     <ul>
+        <li><img src="img/<?= $_GET["gambar"] ?>"></li>
         <li><?= $_GET["nama"]; ?></li>
-        <li><?= $_GET["nim"]; ?></li>
+        <li><?= $_GET["nrp"]; ?></li>
         <li><?= $_GET["email"]; ?></li>
         <li><?= $_GET["jurusan"]; ?></li>
-        <li><img src="img/<?= $_GET["gambar"] ?>"></li>
     </ul>
 
-    <a href="latihan1.php">Back</a>
+    <a href="latihan1.php">Kembali ke daftar mahasiswa</a>
 </body>
 
 </html>

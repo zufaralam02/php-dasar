@@ -1,5 +1,6 @@
 <?php
-// cek apakah tombol login sudah di tekan atau belum
+
+// apakah tombol submit sudah ditekan
 if (isset($_POST["submit"])) {
     // cek username dan password
     if ($_POST["username"] == "admin" && $_POST["password"] == "123") {
@@ -7,10 +8,11 @@ if (isset($_POST["submit"])) {
         header("Location: admin.php");
         exit;
     } else {
-        // jika salah tampilkan pesan
+        // jika salah tampilkan pesan kesalahan
         $error = true;
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +21,6 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
 </head>
 
@@ -33,11 +34,11 @@ if (isset($_POST["submit"])) {
     <ul>
         <form action="" method="post">
             <li>
-                <label for="username">Username : </label>
+                <label for="username">Username :</label>
                 <input type="text" name="username" id="username">
             </li>
             <li>
-                <label for="password">Password : </label>
+                <label for="assword">Password :</label>
                 <input type="password" name="password" id="password">
             </li>
             <li>

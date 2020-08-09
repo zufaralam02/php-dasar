@@ -1,47 +1,41 @@
 <?php
 
-// variable scope dan variable
+// Variable Scope / Lingkup Variabel
 // $x = 10;
-// function show()
+// function tampilX()
 // {
 //     global $x;
 //     echo $x;
 // }
-// show();
+// tampilX();
 
-// superglobals
+// SUPERGLOBALS
 // variable global milik PHP
 // merupakan array associative
 // var_dump($_GET);
+// var_dump($_POST);
 // var_dump($_SERVER);
 // echo $_SERVER["SERVER_NAME"];
 
 // $_GET
 // $_GET["nama"] = "Allam";
-// $_GET["nim"] = "07912890419";
+// $_GET["nrp"] = "123456789";
 // var_dump($_GET);
 
 $mahasiswa = [
     [
-        "nama" => "Allam",
-        "nim" => "9018247",
-        "email" => "allam.it@langitpayment.com",
-        "jurusan" => "Teknik Informatika",
-        "gambar" => "avatar.png"
+        "nrp"       => "123456789",
+        "nama"      => "Rofiif Zufar Allam",
+        "email"     => "allam.it@langitpayment.com",
+        "jurusan"   => "Teknik Informatika",
+        "gambar"    => "avatar.png"
     ],
     [
-        "nama" => "Husnul",
-        "nim" => "0791242",
-        "email" => "husnul@gmail.com",
-        "jurusan" => "Bisnis",
-        "gambar" => "profile.png"
-    ],
-    [
-        "nama" => "Uus",
-        "nim" => "1290582",
-        "email" => "uus@gmail.com",
-        "jurusan" => "Elektro",
-        "gambar" => "user.png"
+        "nama"      => "Muhammad",
+        "nrp"       => "987654321",
+        "email"     => "muhammad.it@langitpayment.com",
+        "jurusan"   => "Sistem Informasi",
+        "gambar"    => "profile.png"
     ],
 ];
 
@@ -63,12 +57,7 @@ $mahasiswa = [
     <ul>
         <?php foreach ($mahasiswa as $m) : ?>
             <li>
-                <a href="latihan2.php?
-                    nama=<?= $m["nama"]; ?> &
-                    nim=<?= $m["nim"]; ?> & 
-                    email=<?= $m["email"]; ?> & 
-                    jurusan=<?= $m["jurusan"]; ?> &
-                    gambar=<?= $m["gambar"]; ?>">
+                <a href="latihan2.php?nama=<?= $m["nama"]; ?>&nrp=<?= $m["nrp"]; ?>&email=<?= $m["email"]; ?>&jurusan=<?= $m["jurusan"]; ?>&gambar=<?= $m["gambar"]; ?>">
                     <?= $m["nama"]; ?>
                 </a>
             </li>
